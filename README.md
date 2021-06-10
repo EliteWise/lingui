@@ -1,1 +1,2 @@
 # lingui
+test
