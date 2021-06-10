@@ -1,2 +1,1 @@
 # lingui
-test
