@@ -1,1 +1,1 @@
-# lingui
+# lingui app
