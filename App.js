@@ -7,6 +7,9 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { SignUp } from "./pages/Signup"
 import { Button, ThemeProvider, Input } from 'react-native-elements';
 
+import SockJS from "sockjs-client";
+import Stomp from "webstomp-client";
+
 const styles = StyleSheet.create({
   parent: {
       width: 300,
@@ -55,8 +58,7 @@ const inputTextStyle = StyleSheet.create({
 });
 
 const sendMessage = (msg) => {
-    console.log(msg)
-    fetch('http://192.168.1.57:8080/send', {
+    return fetch('http://192.168.1.57:8080/send', {
         method: 'POST',
         headers: {
             Accept: 'application/json',
@@ -69,14 +71,19 @@ const sendMessage = (msg) => {
     });
 }
 
-const getMessage = () => {
-    fetch('http://192.168.1.57:8080/send', {
-        method: 'GET',
-        headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json'
-        },
-    });
+let connected = false;
+let socket ='';
+let stompClient = null;
+
+const connect = (text) => {
+    socket = new SockJS("http://192.168.1.57:8080/gs-guide-websocket");
+    stompClient = Stomp.over(socket);
+
+    stompClient.connect({}, function(frame) {
+        connected = true;
+            stompClient.subscribe("/topic/greetings");
+            stompClient.send("/app/hello", JSON.stringify({messageId: "286", content: text}));
+    }, this.onError);
 }
 
 function LoginScreen({ navigation }) {
@@ -105,7 +112,7 @@ function LoginScreen({ navigation }) {
               <TouchableOpacity
                   style = {styles.submitButton}
                   onPress = {
-                      () => sendMessage(text)
+                      () => connect(text)
                   }>
                   <Text> Send </Text>
               </TouchableOpacity>
