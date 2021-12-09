@@ -8,8 +8,8 @@ import 'react-native-gesture-handler';
 export function SignUp({ navigation }) {
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Details Screen</Text>
-        <Button title="Go to Details... again" onPress={() => navigation.goBack()} />
+        <Text>Sign Up Screen</Text>
+        <Button title="Go to Login Page" onPress={() => navigation.goBack()} />
         </View>
     );
 }
