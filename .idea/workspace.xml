@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="205141ea-0b42-4f14-8a10-517d221d3cf8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pages/Chat.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/ChatList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/HttpRequest.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/Websocket.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/Signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Signup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Chat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Websocket.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Websocket.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +48,11 @@
       <workItem from="1638887150585" duration="4741000" />
       <workItem from="1638955784648" duration="12233000" />
       <workItem from="1639054982426" duration="8215000" />
+      <workItem from="1639256037105" duration="4622000" />
+      <workItem from="1639407929914" duration="620000" />
+      <workItem from="1639427106092" duration="11357000" />
+      <workItem from="1639476463404" duration="6589000" />
+      <workItem from="1639496413217" duration="3696000" />
     </task>
     <servers />
   </component>
@@ -69,5 +69,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
